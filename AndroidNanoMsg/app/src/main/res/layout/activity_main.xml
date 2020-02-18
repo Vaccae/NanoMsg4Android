@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接地址："/>
+
+    <EditText
+        android:id="@+id/edtipadr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="192.168.3.13:8001" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <Spinner
+            android:id="@+id/spnnanotype"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <Button
+            android:id="@+id/btnConnent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="连接" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/edtinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入要发送的内容" />
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvmsg"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="接收数据" />
+
+    </ScrollView>
+
+</LinearLayout>
